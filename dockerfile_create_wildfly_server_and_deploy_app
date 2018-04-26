@@ -1,0 +1,3 @@
+FROM airhacks/wildfly
+ARG APPLICATION_WAR=./target/test.war
+COPY ${APPLICATION_WAR} ${DEPLOYMENT_DIR}

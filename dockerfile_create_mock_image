@@ -1,0 +1,6 @@
+FROM java:8
+ENV PROXY_PORT=1080
+ENV SERVER_PORT=1090
+ENV APPLICATION_JAR=target/testingcup.jar
+COPY . .
+CMD ["sh", "-c", "java -jar ${APPLICATION_JAR} ${PROXY_PORT} ${SERVER_PORT}"]
